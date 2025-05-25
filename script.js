@@ -3,18 +3,6 @@ const todoList = document.getElementById('todoList');
 const userFilter = document.getElementById('userFilter');
 let todos = [];
 
-// Fetch data from API
-fetch(API_URL)
-  .then(response => response.json())
-  .then(data => {
-    todos = data;
-    renderDropdown(data);
-    renderTodos(data);
-  })
-  .catch(error => {
-    console.error('Error fetching todos:', error);
-  });
-
 // Render unique user IDs in dropdown
 function renderDropdown(data) {
   const userIds = [...new Set(data.map(todo => todo.userId))];
