@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>To-Do App</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <h1>To-Do App</h1>
-  <label for="userFilter">Filter by User ID:</label>
-  <select id="userFilter">
-    <option value="all">All Users</option>
-  </select>
+  <h1>📋To-Do App</h1>
 
-  <div id="todoList"></div>
+  <div id="dropdownContainer">
+    <button id="toggleDropdown">Select User ID</button>
+    <select id="userSelect" style="display:none;">
+      <option value="all">All Users</option>
+    </select>
+  </div>
+
+  <div id="todoList">
+    <!--items will be inserted here -->
+  </div>
 
   <script src="script.js"></script>
 </body>
